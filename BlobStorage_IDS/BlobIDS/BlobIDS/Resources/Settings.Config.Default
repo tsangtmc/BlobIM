@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Note that settings can be modified real time and will take effect on the next scan weather manual or scheduled -->
+
+<!-- Manual ShutDown -->
+<setting name="ShutDownBIM">False</setting><!-- This is a manual override setting for turning off BIM. When set to true, on the next scanning interval the BIM engine will exit instead. -->
+
+<!-- Detection Settings -->
+<setting name="DownloadPath">./</setting><!-- Path of where to allow the tool to store temp files -->
+<setting name="MaxDownloadSize">0</setting><!-- Keep setting at 0 for high performance - Maximum size a file can be to be downloaded for detection purposes, 3000000 = 3mb (keep in mind transaction costs of download files) -->
+<setting name="SnapShotFileName_Baseline">./BIM_Baseline.Snapshot</setting><!-- This can be ignored unless you have a real need to not having a file created with this name. This will be used as a configuration file for specifying what blobs and containers should be monitored. The state of blob storage baseline is saved as "snapshots", specify the file name for that here -->
+<setting name="SnapShotFileName_Previous">./BIM_Previous.Snapshot</setting><!-- This can be ignored unless you have a real need to not having a temp file created with this name. The state of blob storage from a previous check is stored as "snapshots", specify the file name for that here -->
+<setting name="SnapShotFileName_Current">./BIM_Current.Snapshot</setting><!-- This can be ignored unless you have a real need to not having a temp file created with this name. The state of blob storage during every check is saved as "snapshots", specify the file name for that here -->
+<setting name="SnapShotFileName_FileAccess">./BIM_FileAccess.Snapshot</setting><!-- This can be ignored unless you have a real need to not having a file created with this name. The state of blob storage identifing file permissions saved as "snapshot", specify the file name for that here -->
+<setting name="DetectionPeriod_EveryNumberof_Hours">1</setting><!-- (Hours and minutes can be combine for the same settings) specify periodically how many hours to do a check at, zero will effectively disable this setting -->
+<setting name="DetectionPeriod_EveryNumberof_Minutes">0</setting><!-- (Hours and minutes can be combine for the same settings) specify periodically how many minutes to do a check at, zero will effectively disable this setting -->
+
+<!-- Results\Event Logging Settings -->
+<setting name="EventLog_FileName">./Report.log</setting><!-- FileName of the log of Detected Events -->
+<setting name="EventLog_SaveEvents">True</setting><!-- Enable or Disable saving detected events to log -->
+<setting name="EventLog_MaxSize">100</setting><!-- The Maximum size in MB a log file can be before it is rolled over -->
+<setting name="EventLog_WriteTo_WindowsApplicationLog">False</setting><!-- Enable or Disable recording Detected Events in the Windows Application Log -->
+<setting name="EventLog_ShowTaskBarMessage">True</setting><!-- Enable or Disable taskbar notifications -->
+<setting name="Report_FileName_html">./Report.html</setting><!-- File name of the Detected Events Report in HTML format, this is only a temporary file which is deleted after sending-->
+<setting name="SendReportAs_HTML">True</setting><!-- Enable or Disable sending reports in HTML format -->
+<setting name="Report_FileName_csv">./Report.csv</setting><!-- File name of the Detected Events Report in CSV format, this is only a temporary file which is delted after sending-->
+<setting name="SendReportAs_CSV">True</setting><!-- Enable or Disable sending reports in HTML format -->
+<setting name="SaveBackupOfSnapshotsOnEventFound">True</setting><!-- Enable or Disable saving the "snapshot" as a backup if a Event is Detected -->
+<setting name="EmailBackupOfSnapshotsOnEventFound">True</setting><!-- Enable or Disable Emailing a copy of the "snapshot" if a Event is Detected -->
+
+<!-- Error Logging Settings -->
+<setting name="ErrorLog_Path">./Error.log</setting><!-- File name and path of were to save error log files -->
+<setting name="ErrorLog_WriteTo_LocalLog">True</setting><!-- Enable or Disable weather errors should be saved to log file -->
+<setting name="ErrorLog_WriteTo_WindowsApplicationLog">True</setting><!-- Enable or Disable if errors should be written to windows Application Log -->
+<setting name="ErrorLog_SendEmail_PerError">True</setting><!-- Enable or Disable if emails should be sent when a error occurs -->
+<setting name="ErrorLog_ShowTaskBarMessage">True</setting><!-- Enable or Disable taskbar notifications for errors -->
+
+<!-- HealthMonitoring/Uptime Settings -->
+<setting name="HealthMonitoring_SendEmail_HeartBeatPeriodicallyByHour">1</setting><!-- (Hours and minutes can be combine for the same settings) specify periodically how many hours to send a health status email at, zero will effectively disable this setting -->
+<setting name="HealthMonitoring_SendEmail_HeartBeatPeriodicallyByMinutes">0</setting><!-- (Hours and minutes can be combine for the same settings) specify periodically how many minutes to send a health status email at, zero will effectively disable this setting -->

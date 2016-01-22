@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BlobStorage Credentials -->
+<setting name="BlobStorage_Account_Name">[Required To Be Changed]</setting><!-- BlobStorage Account to be Monitored -->
+<setting name="BlobStorage_Account_Key">[Required To Be Changed]</setting><!-- Key for the BlobStorage Account to be monitored -->
+<setting name="BlobStorage_Account_Key_Encrypted">True</setting><!-- If Account Key in this setting file is Encrypted with DPAPI, if set to False then BIM will try to use the key as "clear text" (without decrypting it) -->
+<setting name="BlobStorage_Account_Environment">blob.core.windows.net</setting><!-- Set the Blob Storage Endpoint environment to connect to -->
+
+<!-- Email Alert Settings -->
+<setting name="Email_SMTPServer_Generic">smtp-mail.outlook.com</setting><!-- The SMTP email server to send out email alerts -->
+<setting name="Email_SMTPServer_Port">587</setting><!-- Port of SMTP Email Server -->
+<setting name="Email_Account">[Required To Be Changed]</setting><!-- Email Account to login to SMTP server -->
+<setting name="Email_Password">[Required To Be Changed]</setting><!-- Password for Email Account to login to SMTP Server -->
+<setting name="Email_Password_Encrypted">True</setting><!-- If Email Password in this setting file is Encrypted with DPAPI, if set to False then BIM will try to use the password as "clear text" (without decrypting it) -->
+<setting name="Email_SMTPServer_WindowsCredentials">smtp-mail.outlook.com</setting><!-- If Windows authentication is enabled, SMTP server to use with windows based Authentication -->
+<setting name="Email_SendUsing_Generic">True</setting><!-- Enable or Disable sending email with SMTP and regular authentication -->
+<setting name="Email_SendUsing_WindowsCredentials">False</setting><!-- Enable or Disable sending email with SMTP using windows based authentication -->
+<setting name="Email_Sender">[Required To Be Changed]</setting><!-- The sender of who email alerts will appear they are from -->
+<setting name="Email_Recipient">[Required To Be Changed]</setting><!-- Who to send emails to. To add multiple separate each email with ';' -->
+<setting name="Email_Subject_Alerts">BlobIM Event Detected</setting><!-- Specify the subject of email Detection based Alerts -->
+<setting name="Email_Subject_HeartBeat">BlobIM HeartBeat</setting><!-- Specify the subject of email Detection based Alerts -->
+<setting name="Email_Subject_Errors">BlobIM Error Occurred</setting><!-- Specify the subject of email Error based alerts -->
+<setting name="Email_Subject_Reporting">BlobIM Report</setting><!-- Specify the subject of email Report based alerts -->
+<setting name="Email_Subject_Backups">BlobIM Backup</setting><!-- Specify the subject of email Backup file based alerts -->
+
