@@ -5,7 +5,7 @@ Please read the readme.docx or readme.pdf for functionality details
 
 -Compiling Code-
 
-The resource and package files can be found here https://github.com/tsangtmc/Resources_BIM
+The resource and package files can be found here https://github.com/tsangtmc/Resources_BIM.
 I was not able to publish the binaries with this code, however i happened to find the matching files in a offically unrelated repo.
 Once you pull down https://github.com/tsangtmc/Resources_BIM copy and paste the files into the BIM project files by matching up the directory structure.
 e.g: all file in BlobStorage_IDS\packages\ from "Resources_BIM" should go into BlobStorage_IDS\packages\ from "BlobIM".
