@@ -1,7 +1,21 @@
 # BlobIM
 Azure Blob Storage Integrity Monitoring and Security Alerting
 
-Please read the readme.docx or readme.pdf for functionality details
+-What is it For?-
+Detect unauthorized changes in Azure Blob Storage
+  E.g: configuration files which should rarely change, or if a change does occur there should be awareness of the change.
+Detect if malware/viruses have been introduced to Azure Blob Storage
+  E.g: when using blob storage to distribute static resources it becomes a target for hackers to introduce malware to try to infect any who consume those resources.
+Detect if any blobs/files can be accessed by anyone on the internet
+  E.g: It could be by accident that a blob is share publically and anonymously. 
+  E.g: It could be purposeful by a malicious actor such as sharing a configuration file publically. When you make a change the malicious actor can always read the file and know how to enter your environment.
+
+-Main Functionalities-
+Please read the readme.docx or readme.pdf for functionality details.
+Blob/File Integrity Monitoring: Configure a storage account to monitor, when, what, and how.
+Alerting: Configure alerting through local logs, email, and windows event log.
+Access Permissions Checking: Check if blobs/files have permissions which allow public anonymous sharing.
+Antivirus Scanning Made Possible:Leverage a locally installed AV to scan blobs/files as BIM performs scans.
 
 -Compiling Code-
 
